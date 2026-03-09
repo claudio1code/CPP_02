@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 13:13:09 by clados-s          #+#    #+#             */
-/*   Updated: 2026/03/09 17:51:22 by clados-s         ###   ########.fr       */
+/*   Updated: 2026/03/09 18:00:19 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,38 +31,34 @@ Fixed::Fixed(const float n){
 	this->number = roundf(n * (1 << bitsNumber));
 }
 
-Fixed&	Fixed::operator=(const Fixed& other){
+Fixed&	Fixed::operator=(const Fixed& other) {
 	if (this != &other)
 		this->number = other.getRawBits();
 	return (*this);
 }
 
-Fixed Fixed::operator+(const Fixed &other)
-{
+Fixed Fixed::operator+(const Fixed &other) const {
 	Fixed result;
 	
 	result.setRawBits(this->number + other.number);
 	return (result);
 }
 
-Fixed Fixed::operator-(const Fixed &other)
-{
+Fixed Fixed::operator-(const Fixed &other) const {
 	Fixed result;
 	
 	result.setRawBits(this->number - other.number);
 	return (result);
 }
 
-Fixed Fixed::operator*(const Fixed &other)
-{
+Fixed Fixed::operator*(const Fixed &other) const {
 	Fixed result;
 	
 	result.setRawBits((this->number * other.number) >> bitsNumber);
 	return (result);
 }
 
-Fixed Fixed::operator/(const Fixed &other)
-{
+Fixed Fixed::operator/(const Fixed &other) const {
 	Fixed result;
 	
 	result.setRawBits((this->number << bitsNumber) / other.number);
