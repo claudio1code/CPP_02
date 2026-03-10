@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 11:49:21 by clados-s          #+#    #+#             */
-/*   Updated: 2026/03/09 18:00:23 by clados-s         ###   ########.fr       */
+/*   Updated: 2026/03/10 14:37:43 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,12 @@ class Fixed{
 		Fixed	operator*(const Fixed& other) const;
 		Fixed	operator/(const Fixed& other) const;
 
-		bool operator>(const Fixed &copyClass) const;
-		bool operator<(const Fixed &copyClass) const;
-		bool operator>=(const Fixed &copyClass) const;
-		bool operator<=(const Fixed &copyClass) const;
-		bool operator==(const Fixed &copyClass) const;
-		bool operator!=(const Fixed &copyClass) const;
+		bool operator>(const Fixed& other) const;
+		bool operator<(const Fixed& other) const;
+		bool operator>=(const Fixed& other) const;
+		bool operator<=(const Fixed& other) const;
+		bool operator==(const Fixed& other) const;
+		bool operator!=(const Fixed& other) const;
 
 		Fixed& operator++();
 		Fixed operator++(int);
