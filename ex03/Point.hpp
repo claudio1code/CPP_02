@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/10 10:54:49 by clados-s          #+#    #+#             */
-/*   Updated: 2026/03/10 14:34:26 by clados-s         ###   ########.fr       */
+/*   Updated: 2026/03/10 15:43:42 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 class Point
 {
 	private:
-		Fixed const y;
 		Fixed const x;
+		Fixed const y;
 		
 	public:
 		~Point();
